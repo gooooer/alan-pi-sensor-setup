@@ -2,8 +2,8 @@
 Description=Run sensor script on boot
 After=network.target
 [Service]
-ExecStart=/home/pi/Work/.env/bin/python /home/pi/Work/main.py
-WorkingDirectory=/home/pi/Work
+ExecStart=/home/pi/alan-pi-sensor-setup/.env/bin/python /home/pi/alan-pi-sensor-setup/main.py
+WorkingDirectory=/home/pi/alan-pi-sensor-setup
 StandardOutput=inherit
 StandardError=inherit
 Restart=always
