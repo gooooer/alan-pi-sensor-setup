@@ -42,21 +42,29 @@ The following steps prepare the Raspberry Pi to run the monitoring script.
    ```Password: raspberry```
 
 4. Update the system packages:  
-```sudo apt update  && sudo apt upgrade -y  ```
+```
+sudo apt update
+sudo apt upgrade -y
+```
+
 5. Enable the I²C interface:  
 - Go to Interface Options → I2C → Enable  
 - Finish and reboot:  
-```sudo reboot```
+```
+sudo reboot
+```
 
 6. Verify that I²C is enabled and working:  
-```
+```  
 sudo apt install -y i2c-tools  
 sudo i2cdetect -y 1  
-```
+```  
    (You should see addresses of connected sensors such as 0x29, 0x62, 0x3C, etc.)
 
 7. Install Python tools:  
-```sudo apt install -y python3 python3-venv python3-pip```
+```
+sudo apt install -y python3 python3-venv python3-pip
+```
 
 8. Clone this repository:  
 ```
@@ -73,14 +81,16 @@ python -m pip install –upgrade pip
 ```
 
 10. Install project dependencies:  
-```pip install -r requirements.txt```
+```
+pip install -r requirements.txt
+```
 
 Testing the Script
 ------------------
 Run the monitoring script manually to confirm it works:
- ```
- source .venv/bin/activate
- python main.py
- ```
+```
+source .venv/bin/activate
+python main.py
+```
 
 If the script runs successfully and displays sensor readings, your setup is complete.
