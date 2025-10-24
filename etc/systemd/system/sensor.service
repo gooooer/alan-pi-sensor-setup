@@ -1,0 +1,13 @@
+[Unit]
+Description=Run sensor script on boot
+After=network.target
+[Service]
+ExecStart=/home/pi/Work/.env/bin/python /home/pi/Work/main.py
+WorkingDirectory=/home/pi/Work
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+Environment=PYTHONUNBUFFERED=1
+[Install]
+WantedBy=multi-user.target
