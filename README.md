@@ -3,7 +3,7 @@ ALAN Pi Environment Monitor
 
 Description
 -----------
-This project is part of research conducted by Dr. James Miksanek at Louisiana State University at Alexandria (LSUA),
+This project is part of research conducted by [Dr. James Miksanek](https://orcid.org/0000-0001-5989-7527) at Louisiana State University at Alexandria (LSUA),
 studying the effects of Artificial Light at Night (ALAN) and climate conditions on insect ecology.
 
 The Raspberry Pi in this setup collects environmental data such as temperature, humidity, CO₂ concentration, and
@@ -28,7 +28,7 @@ Operating System Setup
 The following steps prepare the Raspberry Pi to run the monitoring script.
 
 1. Flash Raspberry Pi OS (Lite is sufficient) to an SD card.
-   You can use Raspberry Pi Imager or Balena Etcher.
+   You can use [Raspberry Pi Imager](https://www.raspberrypi.com/software/) or [Balena Etcher](https://etcher.balena.io/).
 
 2. Enable SSH access before first boot:
    After flashing, open the boot partition on your computer and create an empty file named:
