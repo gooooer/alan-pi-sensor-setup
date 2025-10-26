@@ -18,19 +18,22 @@ Repository Contents
 
 Hardware Connection Setup
 -------------------------
-Inventry used for the circuit is outlined below:
-- [Raspberry Pi Zero WH (Zero W with Headers)](https://www.adafruit.com/product/3708)
-- [SparkFun Qwiic or Stemma QT SHIM for Raspberry Pi / SBC](https://www.adafruit.com/product/4463)
-- [Adafruit PiOLED - 128x32 Monochrome OLED Add-on for Raspberry Pi](https://www.adafruit.com/product/3527)
-- [Adafruit TSL2591 High Dynamic Range Digital Light Sensor - STEMMA QT](https://www.adafruit.com/product/1980)
-- [Adafruit AS7341 10-Channel Light / Color Sensor Breakout - STEMMA QT / Qwiic](https://www.adafruit.com/product/4698)
-- [Adafruit SCD-41 - True CO2 Temperature and Humidity Sensor - STEMMA QT / Qwiic](https://www.adafruit.com/product/5190)
-- [6V Air Valve with 2-pin JST XH Connector - FA0520E](https://www.adafruit.com/product/4663)
-- [Adafruit STEMMA Non-Latching Mini Relay - JST PH 2mm](https://www.adafruit.com/product/4409)
-- [STEMMA JST PH 2mm 3-Pin to Female Socket Cable - 200mm](https://www.adafruit.com/product/3894)
-- [STEMMA QT / Qwiic JST SH 4-pin Cable - 100mm Long](https://www.adafruit.com/product/4210)
-- [2 x 4 AA Battery Holder housing with Leads, 2PCS 4 x 1.5V AA Battery Holder Case](https://www.amazon.com/dp/B0DZWK2TNY)
-- [AA Batteries](https://www.amazon.com/AmazonBasics-Performance-Alkaline-Batteries-20-Pack/dp/B00NTCH52W/)
+Inventory used for single circuit is outlined below.
+
+| HW Item | Count |
+|------|-------|
+| [Raspberry Pi Zero WH (Zero W with Headers)](https://www.adafruit.com/product/3708) | 1 |
+| [SparkFun Qwiic or Stemma QT SHIM for Raspberry Pi / SBC](https://www.adafruit.com/product/4463) | 1 |
+| [Adafruit PiOLED - 128x32 Monochrome OLED Add-on for Raspberry Pi](https://www.adafruit.com/product/3527) | 1 |
+| [Adafruit TSL2591 High Dynamic Range Digital Light Sensor - STEMMA QT](https://www.adafruit.com/product/1980) | 1 |
+| [Adafruit AS7341 10-Channel Light / Color Sensor Breakout - STEMMA QT / Qwiic](https://www.adafruit.com/product/4698) | 1 |
+| [Adafruit SCD-41 - True CO2 Temperature and Humidity Sensor - STEMMA QT / Qwiic](https://www.adafruit.com/product/5190) | 1 |
+| [6V Air Valve with 2-pin JST XH Connector - FA0520E](https://www.adafruit.com/product/4663) | 1 |
+| [Adafruit STEMMA Non-Latching Mini Relay - JST PH 2mm](https://www.adafruit.com/product/4409) | 1 |
+| [STEMMA JST PH 2mm 3-Pin to Female Socket Cable - 200mm](https://www.adafruit.com/product/3894) | 1 |
+| [STEMMA QT / Qwiic JST SH 4-pin Cable - 100mm Long](https://www.adafruit.com/product/4210) | 3 |
+| [2 x 4 AA Battery Holder housing with Leads, 2PCS 4 x 1.5V AA Battery Holder Case](https://www.amazon.com/dp/B0DZWK2TNY) | 1 |
+| [AA Batteries](https://www.amazon.com/AmazonBasics-Performance-Alkaline-Batteries-20-Pack/dp/B00NTCH52W/) | 4 |
 
 [TODO: Describe sensor wiring and pin connections here]
 
