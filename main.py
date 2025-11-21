@@ -1,6 +1,7 @@
 import time
 import board
 import busio
+import digitalio
 import logging
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_as7341
@@ -34,6 +35,15 @@ except Exception as e:
 scd = adafruit_scd4x.SCD4X(i2c)
 scd.start_periodic_measurement()
 time.sleep(5)
+# ---------- Relay Control (GPIO 17 / Pin 11) ----------
+# Adafruit STEMMA Non-Latching Mini Relay connected to GPIO 17
+RELAY_PIN = board.D17  # GPIO 17 (Physical Pin 11)
+CO2_THRESHOLD = 1000  # CO2 threshold in ppm (adjust as needed)
+relay = digitalio.DigitalInOut(RELAY_PIN)
+relay.direction = digitalio.Direction.OUTPUT
+relay.value = False  # Start with relay off
+relay_state = False
+log.info(f"Relay initialized on GPIO 17. CO2 threshold set to {CO2_THRESHOLD} ppm")
 # ---------- OLED (SSD1306, 128x32 @ 0x3C) ----------
 WIDTH = 128
 HEIGHT = 32
@@ -106,6 +116,23 @@ while True:
             draw.text((0, 10), f"CO2:{int(co2)}ppm", font=font, fill=255)
             draw.text((0, 20), f"T:{temp:.1f}C H:{humidity:.1f}%", font=font, fill=255)
             log.info("SCD4x CO2:%d ppm | Temp:%.1f C | RH:%.1f %%", int(co2), temp, humidity)
+            
+            # ----- Relay Control based on CO2 level -----
+            # If CO2 drops below threshold, activate relay (non-latching)
+            if co2 < CO2_THRESHOLD:
+                if not relay_state:
+                    relay.value = True  # Activate relay
+                    relay_state = True
+                    log.info(f"CO2 level {int(co2)} ppm below threshold {CO2_THRESHOLD} ppm - RELAY ACTIVATED")
+            else:
+                if relay_state:
+                    relay.value = False  # Deactivate relay
+                    relay_state = False
+                    log.info(f"CO2 level {int(co2)} ppm above threshold {CO2_THRESHOLD} ppm - RELAY DEACTIVATED")
+            
+            # Display relay status on OLED (if space allows)
+            relay_status = "ON" if relay_state else "OFF"
+            draw.text((90, 10), f"R:{relay_status}", font=font, fill=255)
         else:
             draw.text((0, 10), "CO2: waiting...", font=font, fill=255)
     except Exception as e:
