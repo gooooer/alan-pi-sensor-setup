@@ -35,10 +35,22 @@ Inventory used for single circuit is outlined below.
 | [2 x 4 AA Battery Holder housing with Leads, 2PCS 4 x 1.5V AA Battery Holder Case](https://www.amazon.com/dp/B0DZWK2TNY) | 1 |
 | [AA Batteries](https://www.amazon.com/AmazonBasics-Performance-Alkaline-Batteries-20-Pack/dp/B00NTCH52W/) | 4 |
 
-[TODO: Describe sensor wiring and pin connections here]
+### Sensor Wiring
 
-For now, ensure that all I²C-based sensors (e.g., AS7341, SCD4x, TSL2591) are properly connected to the Raspberry Pi’s
-SCL and SDA pins, and that power (3.3V / 5V) and GND lines are secure.
+All I²C-based sensors (e.g., AS7341, SCD4x, TSL2591) should be properly connected to the Raspberry Pi's
+SCL and SDA pins via the STEMMA QT / Qwiic cables, and that power (3.3V / 5V) and GND lines are secure.
+
+### Relay Connection
+
+The **Adafruit STEMMA Non-Latching Mini Relay** is connected to the Raspberry Pi using the **STEMMA JST PH 2mm 3-Pin to Female Socket Cable**. Connect the cable wires as follows:
+
+| Cable Wire Color | Raspberry Pi Connection | Pin Number |
+|------------------|-------------------------|------------|
+| Black            | GND                     | Pin 14     |
+| Red              | 3.3V                    | Pin 17     |
+| White            | GPIO 17 (Control)       | Pin 11     |
+
+**Note:** The relay is controlled by GPIO 17 and will activate when CO₂ levels drop below the configured threshold (default: 1000 ppm). The relay state is displayed on the OLED display and logged to the system journal.
 
 Operating System Setup
 ----------------------
