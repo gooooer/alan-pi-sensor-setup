@@ -50,6 +50,8 @@ The **Adafruit STEMMA Non-Latching Mini Relay** is connected to the Raspberry Pi
 | Red              | 3.3V                    | Pin 17     |
 | White            | GPIO 17 (Control)       | Pin 11     |
 
+<img width="945" height="662" alt="yHddo" src="https://github.com/user-attachments/assets/21191a9c-bfb1-4284-b79d-146e3a1cc7d5" />
+
 **Note:** The relay is controlled by GPIO 17 and will activate when CO₂ levels drop below the configured threshold (default: 1000 ppm). The relay state is displayed on the OLED display and logged to the system journal.
 
 Operating System Setup
@@ -82,6 +84,7 @@ sudo apt upgrade -y
 ```
 sudo reboot
 ```
+
 
 6. Verify that I²C is enabled and working:  
 ```  
